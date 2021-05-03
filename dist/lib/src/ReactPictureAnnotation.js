@@ -14,6 +14,7 @@ var __extends = (this && this.__extends) || (function () {
 import React from "react";
 import { DefaultAnnotationState } from "./annotation/DefaultAnnotationState";
 import DefaultInputSection from "./DefaultInputSection";
+import DefaultDropdownSection from './custom/DefaultDropdownSection';
 // import DeleteButton from "./DeleteButton";
 import { defaultShapeStyle, RectShape, } from "./Shape";
 import Transformer from "./Transformer";
@@ -319,7 +320,10 @@ var ReactPictureAnnotation = /** @class */ (function (_super) {
         return (React.createElement("div", { className: "rp-stage" },
             React.createElement("canvas", { style: { width: width, height: height }, className: "rp-image", ref: this.imageCanvasRef, width: width * 2, height: height * 2 }),
             React.createElement("canvas", { className: "rp-shapes", style: { width: width, height: height }, ref: this.canvasRef, width: width * 2, height: height * 2, onMouseDown: this.onMouseDown, onMouseMove: this.onMouseMove, onMouseUp: this.onMouseUp, onMouseLeave: this.onMouseLeave, onWheel: this.onWheel }),
-            showInput && (React.createElement("div", { className: "rp-selected-input", style: inputPosition }, inputElement(inputComment, this.onInputCommentChange, this.onDelete)))));
+            showInput && (React.createElement("div", { className: "rp-selected-input", style: inputPosition }, inputElement(inputComment, this.onInputCommentChange, this.onDelete))),
+            React.createElement(DefaultDropdownSection, { value: "placeholder", onClick: function () {
+                    console.log("hello world");
+                } })));
     };
     ReactPictureAnnotation.defaultProps = {
         marginWithInput: 10,

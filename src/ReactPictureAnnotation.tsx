@@ -3,6 +3,7 @@ import { IAnnotation } from "./Annotation";
 import { IAnnotationState } from "./annotation/AnnotationState";
 import { DefaultAnnotationState } from "./annotation/DefaultAnnotationState";
 import DefaultInputSection from "./DefaultInputSection";
+import DefaultDropdownSection from './custom/DefaultDropdownSection';
 // import DeleteButton from "./DeleteButton";
 import {
   defaultShapeStyle,
@@ -193,6 +194,14 @@ export default class ReactPictureAnnotation extends React.Component<
             )}
           </div>
         )}
+				<DefaultDropdownSection
+
+					value="placeholder"
+					onClick = {() => {
+						console.log("hello world")
+					}}
+				
+				></DefaultDropdownSection>
       </div>
     );
   }

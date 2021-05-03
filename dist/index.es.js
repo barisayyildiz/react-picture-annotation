@@ -819,6 +819,63 @@ var DefaultInputSection = (function (_ref) {
   }, /*#__PURE__*/React.createElement(DeleteButton, null)));
 });
 
+var ArrowSvg = (function () {
+  return /*#__PURE__*/React.createElement("svg", {
+    version: "1.1",
+    id: "Capa_1",
+    xmlns: "http://www.w3.org/2000/svg",
+    x: "0px",
+    y: "0px",
+    width: "552.611px",
+    height: "552.611px",
+    viewBox: "0 0 552.611 552.611"
+  }, /*#__PURE__*/React.createElement("g", null, /*#__PURE__*/React.createElement("g", null, /*#__PURE__*/React.createElement("path", {
+    d: "M486.413,221.412L122.347,12.916c-52.938-30.318-95.852-5.44-95.852,55.563v415.652c0,61.004,42.914,85.882,95.852,55.563 l364.066-208.49C539.351,300.887,539.351,251.731,486.413,221.412z"
+  }))), /*#__PURE__*/React.createElement("g", null), /*#__PURE__*/React.createElement("g", null), /*#__PURE__*/React.createElement("g", null), /*#__PURE__*/React.createElement("g", null), /*#__PURE__*/React.createElement("g", null), /*#__PURE__*/React.createElement("g", null), /*#__PURE__*/React.createElement("g", null), /*#__PURE__*/React.createElement("g", null), /*#__PURE__*/React.createElement("g", null), /*#__PURE__*/React.createElement("g", null), /*#__PURE__*/React.createElement("g", null), /*#__PURE__*/React.createElement("g", null), /*#__PURE__*/React.createElement("g", null), /*#__PURE__*/React.createElement("g", null), /*#__PURE__*/React.createElement("g", null));
+});
+
+var DefaultDropdownSection = (function (_ref) {
+  var value = _ref.value,
+      _onClick = _ref.onClick;
+  return /*#__PURE__*/React.createElement("div", {
+    className: "rp-default-dropdown-section"
+  }, /*#__PURE__*/React.createElement("span", null, value), /*#__PURE__*/React.createElement("a", {
+    className: "rp-default-dropdown-arrow",
+    onClick: function onClick() {
+      return _onClick();
+    }
+  }, /*#__PURE__*/React.createElement(ArrowSvg, null)), /*#__PURE__*/React.createElement("div", {
+    className: "rp-default-dropdown-options"
+  }, /*#__PURE__*/React.createElement("ul", null, /*#__PURE__*/React.createElement("li", null, "Item-1"), /*#__PURE__*/React.createElement("li", null, "Item-2"))));
+}); // import React from "react";
+// import DeleteButton from "./DeleteButton";
+// export interface IDefaultInputSection {
+//   value: string;
+//   placeholder?: string;
+//   onChange: (value: string) => void;
+//   onDelete: () => void;
+// }
+// export default ({
+//   value,
+//   onChange,
+//   onDelete,
+//   placeholder = "INPUT TAG HERE!!!!!",
+// }: IDefaultInputSection) => {
+//   return (
+//     <div className="rp-default-input-section">
+//       <input
+//         className="rp-default-input-section_input"
+//         placeholder={placeholder}
+//         value={value}
+//         onChange={(e) => onChange(e.target.value)}
+//       />
+//       <a className="rp-default-input-section_delete" onClick={() => onDelete()}>
+//         <DeleteButton />
+//       </a>
+//     </div>
+//   );
+// };
+
 var defaultState = {
   scale: 1,
   originX: 0,
@@ -1298,7 +1355,12 @@ var ReactPictureAnnotation = /*#__PURE__*/function (_React$Component) {
       }), showInput && /*#__PURE__*/React.createElement("div", {
         className: "rp-selected-input",
         style: inputPosition
-      }, inputElement(inputComment, this.onInputCommentChange, this.onDelete)));
+      }, inputElement(inputComment, this.onInputCommentChange, this.onDelete)), /*#__PURE__*/React.createElement(DefaultDropdownSection, {
+        value: "placeholder",
+        onClick: function onClick() {
+          console.log("hello world");
+        }
+      }));
     }
   }]);
 
