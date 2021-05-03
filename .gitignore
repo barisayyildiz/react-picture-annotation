@@ -64,10 +64,10 @@ typings/
 .idea/
 
 
+# # build
 # build
-build
-dist
-.rpt2_cache
+# dist
+# .rpt2_cache
 
 # storybook
 storybook-static/

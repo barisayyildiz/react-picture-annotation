@@ -191,8 +191,6 @@ export default class ReactPictureAnnotation extends React.Component<
               this.onInputCommentChange,
               this.onDelete
             )}
-
-						<p>hello world</p>
           </div>
         )}
       </div>

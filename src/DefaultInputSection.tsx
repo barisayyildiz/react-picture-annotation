@@ -12,7 +12,7 @@ export default ({
   value,
   onChange,
   onDelete,
-  placeholder = "INPUT TAG HERE",
+  placeholder = "INPUT TAG HERE!!!!!",
 }: IDefaultInputSection) => {
   return (
     <div className="rp-default-input-section">
