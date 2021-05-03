@@ -1,7 +1,8 @@
 /// <reference types="react" />
-export interface IDropdownSection {
-    value: string;
-    onClick: () => void;
-}
-declare const _default: ({ value, onClick }: IDropdownSection) => JSX.Element;
+declare const _default: ({ value, left, top, onDelete }: {
+    value: any;
+    left: any;
+    top: any;
+    onDelete: any;
+}) => JSX.Element;
 export default _default;

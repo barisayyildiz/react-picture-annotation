@@ -185,7 +185,7 @@ export default class ReactPictureAnnotation extends React.Component<
           onMouseLeave={this.onMouseLeave}
           onWheel={this.onWheel}
         />
-        {/* {showInput && (
+        {showInput && (
           <div className="rp-selected-input" style={inputPosition}>
             {inputElement(
               inputComment,
@@ -193,15 +193,24 @@ export default class ReactPictureAnnotation extends React.Component<
               this.onDelete
             )}
           </div>
-        )} */}
-				<DefaultDropdownSection
+        )}
 
-					value="placeholder"
-					onClick = {() => {
-						console.log("hello world")
-					}}
-				
-				></DefaultDropdownSection>
+				{
+					showInput && (
+
+						<DefaultDropdownSection
+		
+							value="placeholder"
+							onDelete = {this.onDelete}
+							left = {this.state.inputPosition.left}
+							top = {this.state.inputPosition.top}
+						
+						></DefaultDropdownSection>
+
+					)
+				}
+
+
       </div>
     );
   }

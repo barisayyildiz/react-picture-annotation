@@ -35,7 +35,7 @@
     }
   }
 
-  var css_248z = "/* .rus {\n  --theme-color: hsl(262, 24%, 84%);\n  --theme-background: hsl(262, 25%, 98%);\n\n  position: relative;\n  padding: 10px;\n  font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto,\n    Oxygen-Sans, Ubuntu, Cantarell, \"Helvetica Neue\", Helvetica, Arial,\n    sans-serif;\n  background-color: var(--theme-background);\n  border: 1px dashed var(--theme-color);\n  border-radius: 5px;\n  cursor: pointer;\n} */\n\n.rp-stage {\n  position: relative;\n  font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto,\n    Oxygen-Sans, Ubuntu, Cantarell, \"Helvetica Neue\", Helvetica, Arial,\n    sans-serif;\n}\n\n.rp-image {\n  position: absolute;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  overflow: hidden;\n}\n\n.rp-shapes {\n  position: absolute;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n}\n\n.rp-selected-input {\n  position: absolute;\n}\n\n.rp-delete {\n  width: 20px;\n  height: 20px;\n  fill: white;\n}\n\n.rp-delete-section {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n\n.rp-default-input-section {\n  display: flex;\n  align-items: stretch;\n  background-color: #3384ff;\n  border: none;\n  border-radius: 5px;\n}\n\n.rp-default-input-section input {\n  padding: 10px;\n  color: white;\n  background: transparent;\n  border: 0;\n  outline: none;\n}\n\n.rp-default-input-section input::placeholder {\n  color: #94bfff;\n}\n\n.rp-default-input-section a {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  width: 35px;\n  color: white;\n  font-size: 12px;\n  background-color: #3b5bdb;\n  border-radius: 0 5px 5px 0;\n  cursor: pointer;\n  transition: background-color 0.5s, color 0.5s;\n}\n\n.rp-default-input-section a:hover,\n.rp-default-input-section a:active {\n  color: #3384ff;\n  background-color: #5c7cfa;\n}\n";
+  var css_248z = "/* .rus {\n  --theme-color: hsl(262, 24%, 84%);\n  --theme-background: hsl(262, 25%, 98%);\n\n  position: relative;\n  padding: 10px;\n  font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto,\n    Oxygen-Sans, Ubuntu, Cantarell, \"Helvetica Neue\", Helvetica, Arial,\n    sans-serif;\n  background-color: var(--theme-background);\n  border: 1px dashed var(--theme-color);\n  border-radius: 5px;\n  cursor: pointer;\n} */\n/* custom components */\n.rp-default-dropdown-section {\n  width: 40%;\n  background-color: red;\n  cursor: pointer; }\n  .rp-default-dropdown-section .rp-default-dropdown-section-header {\n    display: flex;\n    align-items: center;\n    padding-top: 10px;\n    justify-content: space-between; }\n    .rp-default-dropdown-section .rp-default-dropdown-section-header span {\n      width: 70%;\n      padding: 0px 10px;\n      font-size: 1.2rem; }\n    .rp-default-dropdown-section .rp-default-dropdown-section-header .rp-default-dropdown-arrow {\n      width: 20%;\n      display: flex;\n      justify-content: center;\n      align-items: center; }\n      .rp-default-dropdown-section .rp-default-dropdown-section-header .rp-default-dropdown-arrow svg {\n        width: 40%;\n        height: 40%; }\n  .rp-default-dropdown-section .rp-default-dropdown-options {\n    width: 100%;\n    background-color: orange; }\n    .rp-default-dropdown-section .rp-default-dropdown-options ul {\n      list-style: none;\n      font-size: 1.2em;\n      padding: 0px 10px; }\n      .rp-default-dropdown-section .rp-default-dropdown-options ul li {\n        padding: 10px 0px; }\n\n/* end of custom components */\n.rp-stage {\n  position: relative;\n  font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen-Sans, Ubuntu, Cantarell, \"Helvetica Neue\", Helvetica, Arial, sans-serif; }\n\n.rp-image {\n  position: absolute;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  overflow: hidden; }\n\n.rp-shapes {\n  position: absolute;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0; }\n\n.rp-selected-input {\n  position: absolute; }\n\n.rp-delete {\n  width: 20px;\n  height: 20px;\n  fill: white; }\n\n.rp-delete-section {\n  display: flex;\n  align-items: center;\n  justify-content: center; }\n\n.rp-default-input-section {\n  display: flex;\n  align-items: stretch;\n  background-color: #3384ff;\n  border: none;\n  border-radius: 5px; }\n\n.rp-default-input-section input {\n  padding: 10px;\n  color: white;\n  background: transparent;\n  border: 0;\n  outline: none; }\n\n.rp-default-input-section input::placeholder {\n  color: #94bfff; }\n\n.rp-default-input-section a {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  width: 35px;\n  color: white;\n  font-size: 12px;\n  background-color: #3b5bdb;\n  border-radius: 0 5px 5px 0;\n  cursor: pointer;\n  transition: background-color 0.5s, color 0.5s; }\n\n.rp-default-input-section a:hover,\n.rp-default-input-section a:active {\n  color: #3384ff;\n  background-color: #5c7cfa; }\n";
   styleInject(css_248z);
 
   function _classCallCheck(instance, Constructor) {
@@ -809,7 +809,7 @@
         _onChange = _ref.onChange,
         onDelete = _ref.onDelete,
         _ref$placeholder = _ref.placeholder,
-        placeholder = _ref$placeholder === void 0 ? "INPUT TAG HERE!!!!!" : _ref$placeholder;
+        placeholder = _ref$placeholder === void 0 ? "my placeholder..." : _ref$placeholder;
     return /*#__PURE__*/React__default['default'].createElement("div", {
       className: "rp-default-input-section"
     }, /*#__PURE__*/React__default['default'].createElement("input", {
@@ -827,34 +827,34 @@
     }, /*#__PURE__*/React__default['default'].createElement(DeleteButton, null)));
   });
 
-  var ArrowSvg = (function () {
-    return /*#__PURE__*/React__default['default'].createElement("svg", {
-      version: "1.1",
-      id: "Capa_1",
-      xmlns: "http://www.w3.org/2000/svg",
-      x: "0px",
-      y: "0px",
-      width: "552.611px",
-      height: "552.611px",
-      viewBox: "0 0 552.611 552.611"
-    }, /*#__PURE__*/React__default['default'].createElement("g", null, /*#__PURE__*/React__default['default'].createElement("g", null, /*#__PURE__*/React__default['default'].createElement("path", {
-      d: "M486.413,221.412L122.347,12.916c-52.938-30.318-95.852-5.44-95.852,55.563v415.652c0,61.004,42.914,85.882,95.852,55.563 l364.066-208.49C539.351,300.887,539.351,251.731,486.413,221.412z"
-    }))), /*#__PURE__*/React__default['default'].createElement("g", null), /*#__PURE__*/React__default['default'].createElement("g", null), /*#__PURE__*/React__default['default'].createElement("g", null), /*#__PURE__*/React__default['default'].createElement("g", null), /*#__PURE__*/React__default['default'].createElement("g", null), /*#__PURE__*/React__default['default'].createElement("g", null), /*#__PURE__*/React__default['default'].createElement("g", null), /*#__PURE__*/React__default['default'].createElement("g", null), /*#__PURE__*/React__default['default'].createElement("g", null), /*#__PURE__*/React__default['default'].createElement("g", null), /*#__PURE__*/React__default['default'].createElement("g", null), /*#__PURE__*/React__default['default'].createElement("g", null), /*#__PURE__*/React__default['default'].createElement("g", null), /*#__PURE__*/React__default['default'].createElement("g", null), /*#__PURE__*/React__default['default'].createElement("g", null));
-  });
+  // 	value : string;
+  // 	// placeholder? : string;
+  // 	// onChange : (value : string) => void;
+  // 	onClick : () => void;
+  // }
 
   var DefaultDropdownSection = (function (_ref) {
     var value = _ref.value,
-        _onClick = _ref.onClick;
+        left = _ref.left,
+        top = _ref.top,
+        onDelete = _ref.onDelete;
     return /*#__PURE__*/React__default['default'].createElement("div", {
-      className: "rp-default-dropdown-section"
+      className: "rp-default-dropdown-section",
+      style: {
+        position: 'absolute',
+        left: left,
+        top: top
+      }
+    }, /*#__PURE__*/React__default['default'].createElement("div", {
+      className: "rp-default-dropdown-section-header"
     }, /*#__PURE__*/React__default['default'].createElement("span", null, value), /*#__PURE__*/React__default['default'].createElement("a", {
       className: "rp-default-dropdown-arrow",
       onClick: function onClick() {
-        return _onClick();
+        return onDelete();
       }
-    }, /*#__PURE__*/React__default['default'].createElement(ArrowSvg, null)), /*#__PURE__*/React__default['default'].createElement("div", {
+    }, /*#__PURE__*/React__default['default'].createElement(DeleteButton, null))), /*#__PURE__*/React__default['default'].createElement("div", {
       className: "rp-default-dropdown-options"
-    }, /*#__PURE__*/React__default['default'].createElement("ul", null, /*#__PURE__*/React__default['default'].createElement("li", null, "Item-1"), /*#__PURE__*/React__default['default'].createElement("li", null, "Item-2"))));
+    }, /*#__PURE__*/React__default['default'].createElement("ul", null, /*#__PURE__*/React__default['default'].createElement("li", null, /*#__PURE__*/React__default['default'].createElement("a", null, "Item-1")), /*#__PURE__*/React__default['default'].createElement("li", null, /*#__PURE__*/React__default['default'].createElement("a", null, "Item-2")))));
   }); // import React from "react";
   // import DeleteButton from "./DeleteButton";
   // export interface IDefaultInputSection {
@@ -1363,11 +1363,11 @@
         }), showInput && /*#__PURE__*/React__default['default'].createElement("div", {
           className: "rp-selected-input",
           style: inputPosition
-        }, inputElement(inputComment, this.onInputCommentChange, this.onDelete)), /*#__PURE__*/React__default['default'].createElement(DefaultDropdownSection, {
+        }, inputElement(inputComment, this.onInputCommentChange, this.onDelete)), showInput && /*#__PURE__*/React__default['default'].createElement(DefaultDropdownSection, {
           value: "placeholder",
-          onClick: function onClick() {
-            console.log("hello world");
-          }
+          onDelete: this.onDelete,
+          left: this.state.inputPosition.left,
+          top: this.state.inputPosition.top
         }));
       }
     }]);

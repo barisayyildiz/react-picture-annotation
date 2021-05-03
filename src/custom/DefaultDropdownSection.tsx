@@ -1,30 +1,48 @@
 import React from 'react';
-import ArrowSvg from './ArrowSvg';
+import DeleteButton from '../DeleteButton';
 
-export interface IDropdownSection {
-	value : string;
-	// placeholder? : string;
-	// onChange : (value : string) => void;
-	onClick : () => void;
-}
+// export interface IDropdownSection {
+// 	value : string;
+// 	// placeholder? : string;
+// 	// onChange : (value : string) => void;
+// 	onClick : () => void;
+// }
 
 export default({
 	value,
-	onClick
-} : IDropdownSection) => {
+	left,
+	top,
+	onDelete
+}) => {
 	return(
 
-		<div className="rp-default-dropdown-section">
+		<div className="rp-default-dropdown-section"
+		
+			style={{
+				position : 'absolute',
+				left,
+				top
+			}}
+		
+		>
 
-			<span>{value}</span>
-			<a className="rp-default-dropdown-arrow" onClick={() => onClick()}>
-				<ArrowSvg></ArrowSvg>
-			</a>
+			<div className="rp-default-dropdown-section-header">
+
+				<span>{value}</span>
+				<a className="rp-default-dropdown-arrow" onClick={() => onDelete()}>
+					<DeleteButton></DeleteButton>
+				</a>
+
+			</div>
 
 			<div className="rp-default-dropdown-options">
 				<ul>
-					<li>Item-1</li>
-					<li>Item-2</li>
+					<li>
+						<a>Item-1</a>
+					</li>
+					<li>
+						<a>Item-2</a>
+					</li>
 				</ul>
 			</div>
 
