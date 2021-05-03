@@ -809,7 +809,7 @@
         _onChange = _ref.onChange,
         onDelete = _ref.onDelete,
         _ref$placeholder = _ref.placeholder,
-        placeholder = _ref$placeholder === void 0 ? "INPUT TAG HERE" : _ref$placeholder;
+        placeholder = _ref$placeholder === void 0 ? "INPUT TAG HERE!!!!!" : _ref$placeholder;
     return /*#__PURE__*/React__default['default'].createElement("div", {
       className: "rp-default-input-section"
     }, /*#__PURE__*/React__default['default'].createElement("input", {
@@ -1306,7 +1306,7 @@
         }), showInput && /*#__PURE__*/React__default['default'].createElement("div", {
           className: "rp-selected-input",
           style: inputPosition
-        }, inputElement(inputComment, this.onInputCommentChange, this.onDelete), /*#__PURE__*/React__default['default'].createElement("p", null, "hello world")));
+        }, inputElement(inputComment, this.onInputCommentChange, this.onDelete)));
       }
     }]);
 

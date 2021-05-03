@@ -319,9 +319,7 @@ var ReactPictureAnnotation = /** @class */ (function (_super) {
         return (React.createElement("div", { className: "rp-stage" },
             React.createElement("canvas", { style: { width: width, height: height }, className: "rp-image", ref: this.imageCanvasRef, width: width * 2, height: height * 2 }),
             React.createElement("canvas", { className: "rp-shapes", style: { width: width, height: height }, ref: this.canvasRef, width: width * 2, height: height * 2, onMouseDown: this.onMouseDown, onMouseMove: this.onMouseMove, onMouseUp: this.onMouseUp, onMouseLeave: this.onMouseLeave, onWheel: this.onWheel }),
-            showInput && (React.createElement("div", { className: "rp-selected-input", style: inputPosition },
-                inputElement(inputComment, this.onInputCommentChange, this.onDelete),
-                React.createElement("p", null, "hello world")))));
+            showInput && (React.createElement("div", { className: "rp-selected-input", style: inputPosition }, inputElement(inputComment, this.onInputCommentChange, this.onDelete)))));
     };
     ReactPictureAnnotation.defaultProps = {
         marginWithInput: 10,
