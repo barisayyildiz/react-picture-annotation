@@ -34,6 +34,7 @@ export default class ReactPictureAnnotation extends React.Component<IReactPictur
             left: number;
             top: number;
         };
+        isOpen: boolean;
         showInput: boolean;
         inputComment: string;
     };
@@ -65,6 +66,7 @@ export default class ReactPictureAnnotation extends React.Component<IReactPictur
     private syncAnnotationData;
     private syncSelectedId;
     private onDelete;
+    private toggleList;
     private setCanvasDPI;
     private onInputCommentChange;
     private cleanImage;

@@ -32,6 +32,7 @@ var ReactPictureAnnotation = /** @class */ (function (_super) {
                 left: 0,
                 top: 0,
             },
+            isOpen: false,
             showInput: false,
             inputComment: "",
         };
@@ -176,6 +177,11 @@ var ReactPictureAnnotation = /** @class */ (function (_super) {
                 _this.onShapeChange();
             }
         };
+        _this.toggleList = function () {
+            _this.setState({
+                isOpen: !_this.state.isOpen
+            });
+        };
         _this.setCanvasDPI = function () {
             var currentCanvas = _this.canvasRef.current;
             var currentImageCanvas = _this.imageCanvasRef.current;
@@ -191,7 +197,10 @@ var ReactPictureAnnotation = /** @class */ (function (_super) {
         _this.onInputCommentChange = function (comment) {
             var selectedShapeIndex = _this.shapes.findIndex(function (item) { return item.getAnnotationData().id === _this.selectedId; });
             _this.shapes[selectedShapeIndex].setComment(comment);
-            _this.setState({ inputComment: comment });
+            _this.setState({
+                inputComment: comment,
+                isOpen: false
+            });
         };
         _this.cleanImage = function () {
             if (_this.imageCanvas2D && _this.imageCanvasRef.current) {
@@ -321,7 +330,7 @@ var ReactPictureAnnotation = /** @class */ (function (_super) {
             React.createElement("canvas", { style: { width: width, height: height }, className: "rp-image", ref: this.imageCanvasRef, width: width * 2, height: height * 2 }),
             React.createElement("canvas", { className: "rp-shapes", style: { width: width, height: height }, ref: this.canvasRef, width: width * 2, height: height * 2, onMouseDown: this.onMouseDown, onMouseMove: this.onMouseMove, onMouseUp: this.onMouseUp, onMouseLeave: this.onMouseLeave, onWheel: this.onWheel }),
             showInput && (React.createElement("div", { className: "rp-selected-input", style: inputPosition }, inputElement(inputComment, this.onInputCommentChange, this.onDelete))),
-            showInput && (React.createElement(DefaultDropdownSection, { value: "placeholder", onDelete: this.onDelete, left: this.state.inputPosition.left, top: this.state.inputPosition.top }))));
+            showInput && (React.createElement(DefaultDropdownSection, { value: this.state.inputComment ? this.state.inputComment : 'pick something', onDelete: this.onDelete, left: this.state.inputPosition.left, top: this.state.inputPosition.top, toggle: this.toggleList, isOpen: this.state.isOpen, onInputCommentChange: this.onInputCommentChange }))));
     };
     ReactPictureAnnotation.defaultProps = {
         marginWithInput: 10,

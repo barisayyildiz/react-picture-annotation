@@ -70,6 +70,7 @@ export default class ReactPictureAnnotation extends React.Component<
       left: 0,
       top: 0,
     },
+		isOpen : false,
     showInput: false,
     inputComment: "",
   };
@@ -200,10 +201,13 @@ export default class ReactPictureAnnotation extends React.Component<
 
 						<DefaultDropdownSection
 		
-							value="placeholder"
+							value={this.state.inputComment ? this.state.inputComment : 'pick something'}
 							onDelete = {this.onDelete}
 							left = {this.state.inputPosition.left}
 							top = {this.state.inputPosition.top}
+							toggle = {this.toggleList}
+							isOpen = {this.state.isOpen}
+							onInputCommentChange = {this.onInputCommentChange}
 						
 						></DefaultDropdownSection>
 
@@ -333,6 +337,12 @@ export default class ReactPictureAnnotation extends React.Component<
     }
   };
 
+	private toggleList = () => {
+		this.setState({
+			isOpen : !this.state.isOpen
+		})
+	}
+
   private setCanvasDPI = () => {
     const currentCanvas = this.canvasRef.current;
     const currentImageCanvas = this.imageCanvasRef.current;
@@ -351,7 +361,10 @@ export default class ReactPictureAnnotation extends React.Component<
       (item) => item.getAnnotationData().id === this.selectedId
     );
     this.shapes[selectedShapeIndex].setComment(comment);
-    this.setState({ inputComment: comment });
+    this.setState({ 
+			inputComment: comment,
+			isOpen : false 
+		});
   };
 
   private cleanImage = () => {

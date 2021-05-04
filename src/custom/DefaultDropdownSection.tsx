@@ -12,7 +12,10 @@ export default({
 	value,
 	left,
 	top,
-	onDelete
+	onDelete,
+	toggle,
+	isOpen,
+	onInputCommentChange
 }) => {
 	return(
 
@@ -26,7 +29,7 @@ export default({
 		
 		>
 
-			<div className="rp-default-dropdown-section-header">
+			<div className="rp-default-dropdown-section-header"  onClick={() => toggle()} >
 
 				<span>{value}</span>
 				<a className="rp-default-dropdown-arrow" onClick={() => onDelete()}>
@@ -35,16 +38,21 @@ export default({
 
 			</div>
 
-			<div className="rp-default-dropdown-options">
-				<ul>
-					<li>
-						<a>Item-1</a>
-					</li>
-					<li>
-						<a>Item-2</a>
-					</li>
-				</ul>
-			</div>
+			{
+				isOpen && (
+					<div className="rp-default-dropdown-options">
+						<ul>
+							<li onClick={() => onInputCommentChange("Item-1")}>
+								<a>Item-1</a>
+							</li>
+							<li onClick={() => onInputCommentChange("Item-2")}>
+								<a>Item-2</a>
+							</li>
+						</ul>
+					</div>
+				)
+			}
+
 
 		</div>
 
