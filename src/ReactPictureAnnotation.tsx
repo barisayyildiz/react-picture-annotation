@@ -201,7 +201,7 @@ export default class ReactPictureAnnotation extends React.Component<
 
 						<DefaultDropdownSection
 		
-							value={this.state.inputComment ? this.state.inputComment : 'pick something'}
+							value={this.state.inputComment}
 							onDelete = {this.onDelete}
 							left = {this.state.inputPosition.left}
 							top = {this.state.inputPosition.top}

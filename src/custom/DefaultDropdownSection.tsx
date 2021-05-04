@@ -31,7 +31,7 @@ export default({
 
 			<div className="rp-default-dropdown-section-header"  onClick={() => toggle()} >
 
-				<span>{value}</span>
+				<span className={value ? 'selected' : ''}>{value ? value : 'pick something...'}</span>
 				<a className="rp-default-dropdown-arrow" onClick={() => onDelete()}>
 					<DeleteButton></DeleteButton>
 				</a>

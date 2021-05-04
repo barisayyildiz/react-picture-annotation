@@ -14,7 +14,7 @@ export default (function (_a) {
             top: top
         } },
         React.createElement("div", { className: "rp-default-dropdown-section-header", onClick: function () { return toggle(); } },
-            React.createElement("span", null, value),
+            React.createElement("span", { className: value ? 'selected' : '' }, value ? value : 'pick something...'),
             React.createElement("a", { className: "rp-default-dropdown-arrow", onClick: function () { return onDelete(); } },
                 React.createElement(DeleteButton, null))),
         isOpen && (React.createElement("div", { className: "rp-default-dropdown-options" },
