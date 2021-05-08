@@ -840,7 +840,8 @@
         onDelete = _ref.onDelete,
         toggle = _ref.toggle,
         isOpen = _ref.isOpen,
-        onInputCommentChange = _ref.onInputCommentChange;
+        onInputCommentChange = _ref.onInputCommentChange,
+        dropdownOptions = _ref.dropdownOptions;
     return /*#__PURE__*/React__default['default'].createElement("div", {
       className: "rp-default-dropdown-section",
       style: {
@@ -862,15 +863,13 @@
       }
     }, /*#__PURE__*/React__default['default'].createElement(DeleteButton, null))), isOpen && /*#__PURE__*/React__default['default'].createElement("div", {
       className: "rp-default-dropdown-options"
-    }, /*#__PURE__*/React__default['default'].createElement("ul", null, /*#__PURE__*/React__default['default'].createElement("li", {
-      onClick: function onClick() {
-        return onInputCommentChange("Item-1");
-      }
-    }, /*#__PURE__*/React__default['default'].createElement("a", null, "Item-1")), /*#__PURE__*/React__default['default'].createElement("li", {
-      onClick: function onClick() {
-        return onInputCommentChange("Item-2");
-      }
-    }, /*#__PURE__*/React__default['default'].createElement("a", null, "Item-2")))));
+    }, /*#__PURE__*/React__default['default'].createElement("ul", null, dropdownOptions.map(function (item) {
+      return /*#__PURE__*/React__default['default'].createElement("li", {
+        onClick: function onClick() {
+          return onInputCommentChange(item);
+        }
+      }, /*#__PURE__*/React__default['default'].createElement("a", null, item));
+    }))));
   }); // import React from "react";
   // import DeleteButton from "./DeleteButton";
   // export interface IDefaultInputSection {
@@ -1394,7 +1393,8 @@
           top: this.state.inputPosition.top,
           toggle: this.toggleList,
           isOpen: this.state.isOpen,
-          onInputCommentChange: this.onInputCommentChange
+          onInputCommentChange: this.onInputCommentChange,
+          dropdownOptions: this.props.dropdownOptions
         }));
       }
     }]);

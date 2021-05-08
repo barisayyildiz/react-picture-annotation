@@ -832,7 +832,8 @@ var DefaultDropdownSection = (function (_ref) {
       onDelete = _ref.onDelete,
       toggle = _ref.toggle,
       isOpen = _ref.isOpen,
-      onInputCommentChange = _ref.onInputCommentChange;
+      onInputCommentChange = _ref.onInputCommentChange,
+      dropdownOptions = _ref.dropdownOptions;
   return /*#__PURE__*/React.createElement("div", {
     className: "rp-default-dropdown-section",
     style: {
@@ -854,15 +855,13 @@ var DefaultDropdownSection = (function (_ref) {
     }
   }, /*#__PURE__*/React.createElement(DeleteButton, null))), isOpen && /*#__PURE__*/React.createElement("div", {
     className: "rp-default-dropdown-options"
-  }, /*#__PURE__*/React.createElement("ul", null, /*#__PURE__*/React.createElement("li", {
-    onClick: function onClick() {
-      return onInputCommentChange("Item-1");
-    }
-  }, /*#__PURE__*/React.createElement("a", null, "Item-1")), /*#__PURE__*/React.createElement("li", {
-    onClick: function onClick() {
-      return onInputCommentChange("Item-2");
-    }
-  }, /*#__PURE__*/React.createElement("a", null, "Item-2")))));
+  }, /*#__PURE__*/React.createElement("ul", null, dropdownOptions.map(function (item) {
+    return /*#__PURE__*/React.createElement("li", {
+      onClick: function onClick() {
+        return onInputCommentChange(item);
+      }
+    }, /*#__PURE__*/React.createElement("a", null, item));
+  }))));
 }); // import React from "react";
 // import DeleteButton from "./DeleteButton";
 // export interface IDefaultInputSection {
@@ -1386,7 +1385,8 @@ var ReactPictureAnnotation = /*#__PURE__*/function (_React$Component) {
         top: this.state.inputPosition.top,
         toggle: this.toggleList,
         isOpen: this.state.isOpen,
-        onInputCommentChange: this.onInputCommentChange
+        onInputCommentChange: this.onInputCommentChange,
+        dropdownOptions: this.props.dropdownOptions
       }));
     }
   }]);

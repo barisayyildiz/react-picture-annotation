@@ -16,6 +16,7 @@ interface IReactPictureAnnotationProps {
     annotationStyle: IShapeStyle;
     defaultAnnotationSize?: number[];
     inputElement: (value: string, onChange: (value: string) => void, onDelete: () => void) => React.ReactElement;
+    dropdownOptions: string[];
 }
 interface IStageState {
     scale: number;

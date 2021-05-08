@@ -15,7 +15,8 @@ export default({
 	onDelete,
 	toggle,
 	isOpen,
-	onInputCommentChange
+	onInputCommentChange,
+	dropdownOptions
 }) => {
 	return(
 
@@ -42,12 +43,22 @@ export default({
 				isOpen && (
 					<div className="rp-default-dropdown-options">
 						<ul>
-							<li onClick={() => onInputCommentChange("Item-1")}>
+							{
+								dropdownOptions.map(item => {
+									return(
+										<li onClick={() => onInputCommentChange(item)}>
+											<a>{item}</a>
+										</li>
+									)
+								})
+							}
+
+							{/* <li onClick={() => onInputCommentChange("Item-1")}>
 								<a>Item-1</a>
 							</li>
 							<li onClick={() => onInputCommentChange("Item-2")}>
 								<a>Item-2</a>
-							</li>
+							</li> */}
 						</ul>
 					</div>
 				)

@@ -48,7 +48,7 @@ storiesOf("Hello World", module)
                 window.removeEventListener("resize", onResize);
             };
         }, []);
-        return (React.createElement(ReactPictureAnnotation, { width: size.width, height: size.height, annotationData: annotationData, onChange: function (data) { return setAnnotationData(data); }, selectedId: selectedId, onSelect: function (e) { return setSelectedId(e); }, annotationStyle: __assign(__assign({}, defaultShapeStyle), { shapeStrokeStyle: "#2193ff", transformerBackground: "black" }), defaultAnnotationSize: [120, 90], image: "https://bequank.oss-cn-beijing.aliyuncs.com/landpage/large/60682895_p0_master1200.jpg", inputElement: function (value, onChange, onDelete) { return (React.createElement(DefaultInputSection, __assign({ placeholder: "Hello world" }, { value: value, onChange: onChange, onDelete: onDelete }))); } }));
+        return (React.createElement(ReactPictureAnnotation, { width: size.width, height: size.height, annotationData: annotationData, onChange: function (data) { return setAnnotationData(data); }, selectedId: selectedId, onSelect: function (e) { return setSelectedId(e); }, annotationStyle: __assign(__assign({}, defaultShapeStyle), { shapeStrokeStyle: "#2193ff", transformerBackground: "black" }), defaultAnnotationSize: [120, 90], image: "https://bequank.oss-cn-beijing.aliyuncs.com/landpage/large/60682895_p0_master1200.jpg", inputElement: function (value, onChange, onDelete) { return (React.createElement(DefaultInputSection, __assign({ placeholder: "Hello world" }, { value: value, onChange: onChange, onDelete: onDelete }))); }, dropdownOptions: [] }));
     };
     return React.createElement(AnnotationComponent, null);
 });

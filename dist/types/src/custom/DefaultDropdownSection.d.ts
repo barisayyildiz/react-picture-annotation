@@ -1,5 +1,5 @@
 /// <reference types="react" />
-declare const _default: ({ value, left, top, onDelete, toggle, isOpen, onInputCommentChange }: {
+declare const _default: ({ value, left, top, onDelete, toggle, isOpen, onInputCommentChange, dropdownOptions }: {
     value: any;
     left: any;
     top: any;
@@ -7,5 +7,6 @@ declare const _default: ({ value, left, top, onDelete, toggle, isOpen, onInputCo
     toggle: any;
     isOpen: any;
     onInputCommentChange: any;
+    dropdownOptions: any;
 }) => JSX.Element;
 export default _default;

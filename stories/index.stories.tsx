@@ -74,6 +74,7 @@ storiesOf("Hello World", module)
               {...{ value, onChange, onDelete }}
             />
           )}
+					dropdownOptions={[]}
         />
       );
     };

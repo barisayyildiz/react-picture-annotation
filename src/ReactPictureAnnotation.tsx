@@ -31,6 +31,7 @@ interface IReactPictureAnnotationProps {
     onChange: (value: string) => void,
     onDelete: () => void
   ) => React.ReactElement;
+	dropdownOptions : string[];
 }
 
 interface IStageState {
@@ -208,6 +209,7 @@ export default class ReactPictureAnnotation extends React.Component<
 							toggle = {this.toggleList}
 							isOpen = {this.state.isOpen}
 							onInputCommentChange = {this.onInputCommentChange}
+							dropdownOptions = {this.props.dropdownOptions}
 						
 						></DefaultDropdownSection>
 
