@@ -136,7 +136,7 @@ var ReactPictureAnnotation = /** @class */ (function (_super) {
                 var refreshShapesWithAnnotationData = function () {
                     _this.selectedId = null;
                     _this.shapes = annotationData.map(function (eachAnnotationData) {
-                        return new RectShape(eachAnnotationData, _this.onShapeChange, _this.annotationStyle);
+                        return new RectShape(eachAnnotationData, _this.onShapeChange, _this.annotationStyle, _this.props.width, _this.props.height);
                     });
                     _this.onShapeChange();
                 };

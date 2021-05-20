@@ -296,7 +296,9 @@ export default class ReactPictureAnnotation extends React.Component<
             new RectShape(
               eachAnnotationData,
               this.onShapeChange,
-              this.annotationStyle
+              this.annotationStyle,
+							this.props.width,
+							this.props.height
             )
         );
         this.onShapeChange();

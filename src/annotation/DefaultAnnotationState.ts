@@ -11,6 +11,7 @@ export class DefaultAnnotationState implements IAnnotationState {
   private readonly context: ReactPictureAnnotation;
   constructor(context: ReactPictureAnnotation) {
     this.context = context;
+		// console.log("width : " + this.context.props.width);
   }
 
   public onMouseMove = () => undefined;
@@ -62,7 +63,9 @@ export class DefaultAnnotationState implements IAnnotationState {
           },
         },
         onShapeChange,
-        this.context.annotationStyle
+        this.context.annotationStyle,
+				this.context.props.width,
+				this.context.props.height
       )
     );
 

@@ -42,13 +42,17 @@ export interface IShape {
     adjustMark: (adjustBase: IShapeAdjustBase) => void;
     setComment: (comment: string) => void;
     equal: (data: IAnnotation) => boolean;
+    imageWidth: number;
+    imageHeight: number;
 }
 export declare class RectShape implements IShape {
     private readonly annotationData;
     private readonly onChangeCallBack;
     private dragStartOffset;
     readonly shapeStyle: IShapeStyle;
-    constructor(data: IAnnotation<IShapeData>, onChange: () => void, shapeStyle?: IShapeStyle);
+    imageHeight: any;
+    imageWidth: any;
+    constructor(data: IAnnotation<IShapeData>, onChange: () => void, shapeStyle: IShapeStyle | undefined, imageWidth: number, imageHeight: number);
     onDragStart: (positionX: number, positionY: number) => void;
     onDrag: (positionX: number, positionY: number) => void;
     checkBoundary: (positionX: number, positionY: number) => boolean;

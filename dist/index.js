@@ -35,7 +35,7 @@
     }
   }
 
-  var css_248z = "/* .rus {\n  --theme-color: hsl(262, 24%, 84%);\n  --theme-background: hsl(262, 25%, 98%);\n\n  position: relative;\n  padding: 10px;\n  font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto,\n    Oxygen-Sans, Ubuntu, Cantarell, \"Helvetica Neue\", Helvetica, Arial,\n    sans-serif;\n  background-color: var(--theme-background);\n  border: 1px dashed var(--theme-color);\n  border-radius: 5px;\n  cursor: pointer;\n} */\n/* custom components */\n.rp-default-dropdown-section {\n  width: 40%;\n  background-color: #3384ff;\n  cursor: pointer; }\n  .rp-default-dropdown-section .rp-default-dropdown-section-header {\n    display: flex;\n    align-items: center;\n    justify-content: space-between; }\n    .rp-default-dropdown-section .rp-default-dropdown-section-header span {\n      width: 70%;\n      font-size: 1.2rem;\n      color: white;\n      opacity: 0.6;\n      padding: 10px; }\n    .rp-default-dropdown-section .rp-default-dropdown-section-header .selected {\n      opacity: 1; }\n    .rp-default-dropdown-section .rp-default-dropdown-section-header .rp-default-dropdown-arrow {\n      width: 15%;\n      display: flex;\n      justify-content: center;\n      align-items: center;\n      background-color: #3b5bdb;\n      min-height: 50px; }\n      .rp-default-dropdown-section .rp-default-dropdown-section-header .rp-default-dropdown-arrow svg {\n        width: 40%;\n        height: 40%; }\n  .rp-default-dropdown-section .rp-default-dropdown-options {\n    width: 100%; }\n    .rp-default-dropdown-section .rp-default-dropdown-options ul {\n      list-style: none;\n      font-size: 1.2em;\n      padding: 0px;\n      margin: 0px; }\n      .rp-default-dropdown-section .rp-default-dropdown-options ul li {\n        background-color: #d4982cf2;\n        padding: 10px; }\n        .rp-default-dropdown-section .rp-default-dropdown-options ul li:hover {\n          background-color: #b67907; }\n\n/* end of custom components */\n.rp-stage {\n  position: relative;\n  font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen-Sans, Ubuntu, Cantarell, \"Helvetica Neue\", Helvetica, Arial, sans-serif; }\n\n.rp-image {\n  position: absolute;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  overflow: hidden; }\n\n.rp-shapes {\n  position: absolute;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0; }\n\n.rp-selected-input {\n  position: absolute; }\n\n.rp-delete {\n  width: 20px;\n  height: 20px;\n  fill: white; }\n\n.rp-delete-section {\n  display: flex;\n  align-items: center;\n  justify-content: center; }\n\n.rp-default-input-section {\n  display: flex;\n  align-items: stretch;\n  background-color: #3384ff;\n  border: none;\n  border-radius: 5px; }\n\n.rp-default-input-section input {\n  padding: 10px;\n  color: white;\n  background: transparent;\n  border: 0;\n  outline: none; }\n\n.rp-default-input-section input::placeholder {\n  color: #94bfff; }\n\n.rp-default-input-section a {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  width: 35px;\n  color: white;\n  font-size: 12px;\n  background-color: #3b5bdb;\n  border-radius: 0 5px 5px 0;\n  cursor: pointer;\n  transition: background-color 0.5s, color 0.5s; }\n\n.rp-default-input-section a:hover,\n.rp-default-input-section a:active {\n  color: #3384ff;\n  background-color: #5c7cfa; }\n";
+  var css_248z = "/* .rus {\n  --theme-color: hsl(262, 24%, 84%);\n  --theme-background: hsl(262, 25%, 98%);\n\n  position: relative;\n  padding: 10px;\n  font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto,\n    Oxygen-Sans, Ubuntu, Cantarell, \"Helvetica Neue\", Helvetica, Arial,\n    sans-serif;\n  background-color: var(--theme-background);\n  border: 1px dashed var(--theme-color);\n  border-radius: 5px;\n  cursor: pointer;\n} */\n/* custom components */\n.rp-default-dropdown-section {\n  width: 40%;\n  background-color: #3384ff;\n  cursor: pointer; }\n  .rp-default-dropdown-section .rp-default-dropdown-section-header {\n    display: flex;\n    align-items: center;\n    justify-content: space-between; }\n    .rp-default-dropdown-section .rp-default-dropdown-section-header span {\n      width: 70%;\n      font-size: 1.2rem;\n      color: white;\n      opacity: 0.6;\n      padding: 10px; }\n    .rp-default-dropdown-section .rp-default-dropdown-section-header .selected {\n      opacity: 1; }\n    .rp-default-dropdown-section .rp-default-dropdown-section-header .rp-default-dropdown-svg {\n      width: 15%;\n      display: flex;\n      justify-content: center;\n      align-items: center;\n      background-color: #3b5bdb;\n      min-height: 50px; }\n      .rp-default-dropdown-section .rp-default-dropdown-section-header .rp-default-dropdown-svg svg {\n        width: 40%;\n        height: 40%; }\n  .rp-default-dropdown-section .rp-default-dropdown-options {\n    width: 100%; }\n    .rp-default-dropdown-section .rp-default-dropdown-options ul {\n      list-style: none;\n      font-size: 1.2em;\n      padding: 0px;\n      margin: 0px; }\n      .rp-default-dropdown-section .rp-default-dropdown-options ul li {\n        background-color: #d4982cf2;\n        padding: 10px; }\n        .rp-default-dropdown-section .rp-default-dropdown-options ul li:hover {\n          background-color: #b67907; }\n\n/* end of custom components */\n.rp-stage {\n  position: relative;\n  font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen-Sans, Ubuntu, Cantarell, \"Helvetica Neue\", Helvetica, Arial, sans-serif; }\n\n.rp-image {\n  position: absolute;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  overflow: hidden; }\n\n.rp-shapes {\n  position: absolute;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0; }\n\n.rp-selected-input {\n  position: absolute; }\n\n.rp-delete {\n  width: 20px;\n  height: 20px;\n  fill: white; }\n\n.rp-delete-section {\n  display: flex;\n  align-items: center;\n  justify-content: center; }\n\n.rp-default-input-section {\n  display: flex;\n  align-items: stretch;\n  background-color: #3384ff;\n  border: none;\n  border-radius: 5px; }\n\n.rp-default-input-section input {\n  padding: 10px;\n  color: white;\n  background: transparent;\n  border: 0;\n  outline: none; }\n\n.rp-default-input-section input::placeholder {\n  color: #94bfff; }\n\n.rp-default-input-section a {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  width: 35px;\n  color: white;\n  font-size: 12px;\n  background-color: #3b5bdb;\n  border-radius: 0 5px 5px 0;\n  cursor: pointer;\n  transition: background-color 0.5s, color 0.5s; }\n\n.rp-default-input-section a:hover,\n.rp-default-input-section a:active {\n  color: #3384ff;\n  background-color: #5c7cfa; }\n";
   styleInject(css_248z);
 
   function _classCallCheck(instance, Constructor) {
@@ -273,6 +273,8 @@
     var _this = this;
 
     var shapeStyle = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : defaultShapeStyle;
+    var imageWidth = arguments.length > 3 ? arguments[3] : undefined;
+    var imageHeight = arguments.length > 4 ? arguments[4] : undefined;
 
     _classCallCheck(this, RectShape);
 
@@ -280,6 +282,8 @@
     this.onChangeCallBack = void 0;
     this.dragStartOffset = void 0;
     this.shapeStyle = void 0;
+    this.imageHeight = void 0;
+    this.imageWidth = void 0;
 
     this.onDragStart = function (positionX, positionY) {
       var _this$annotationData$ = _this.annotationData.mark,
@@ -292,18 +296,28 @@
     };
 
     this.onDrag = function (positionX, positionY) {
-      _this.annotationData.mark.x = positionX - _this.dragStartOffset.offsetX;
-      _this.annotationData.mark.y = positionY - _this.dragStartOffset.offsetY;
+      // this.annotationData.mark.x = positionX - this.dragStartOffset.offsetX;
+      // this.annotationData.mark.y = positionY - this.dragStartOffset.offsetY;
+      var _this$annotationData$2 = _this.annotationData.mark,
+          width = _this$annotationData$2.width,
+          height = _this$annotationData$2.height;
+      var markX = positionX - _this.dragStartOffset.offsetX;
+      var markY = positionY - _this.dragStartOffset.offsetY; // console.log(positionX + " " + positionY + " " + this.annotationData.mark.x + " " + this.annotationData.mark.y + " " + this.annotationData.mark.width + " " + this.annotationData.mark.height + " ");
 
-      _this.onChangeCallBack();
+      if (markX >= 0 && markX + width <= _this.imageWidth && markY >= 0 && markY + height <= _this.imageHeight) {
+        _this.annotationData.mark.x = positionX - _this.dragStartOffset.offsetX;
+        _this.annotationData.mark.y = positionY - _this.dragStartOffset.offsetY;
+
+        _this.onChangeCallBack();
+      }
     };
 
     this.checkBoundary = function (positionX, positionY) {
-      var _this$annotationData$2 = _this.annotationData.mark,
-          x = _this$annotationData$2.x,
-          y = _this$annotationData$2.y,
-          width = _this$annotationData$2.width,
-          height = _this$annotationData$2.height;
+      var _this$annotationData$3 = _this.annotationData.mark,
+          x = _this$annotationData$3.x,
+          y = _this$annotationData$3.y,
+          width = _this$annotationData$3.width,
+          height = _this$annotationData$3.height;
       return (positionX > x && positionX < x + width || positionX < x && positionX > x + width) && (positionY > y && positionY < y + height || positionY < y && positionY > y + height);
     };
 
@@ -392,6 +406,8 @@
     this.annotationData = _data;
     this.onChangeCallBack = onChange;
     this.shapeStyle = shapeStyle;
+    this.imageWidth = imageWidth;
+    this.imageHeight = imageHeight;
   };
 
   var Transformer = /*#__PURE__*/function () {
@@ -778,12 +794,12 @@
           height: 0,
           type: "RECT"
         }
-      }, onShapeChange, _this.context.annotationStyle));
+      }, onShapeChange, _this.context.annotationStyle, _this.context.props.width, _this.context.props.height));
 
       setState(new CreatingAnnotationState(_this.context));
     };
 
-    this.context = context;
+    this.context = context; // console.log("width : " + this.context.props.width);
   };
 
   var DeleteButton = (function () {
@@ -827,12 +843,6 @@
     }, /*#__PURE__*/React__default['default'].createElement(DeleteButton, null)));
   });
 
-  // 	value : string;
-  // 	// placeholder? : string;
-  // 	// onChange : (value : string) => void;
-  // 	onClick : () => void;
-  // }
-
   var DefaultDropdownSection = (function (_ref) {
     var value = _ref.value,
         left = _ref.left,
@@ -857,7 +867,7 @@
     }, /*#__PURE__*/React__default['default'].createElement("span", {
       className: value ? 'selected' : ''
     }, value ? value : 'pick something...'), /*#__PURE__*/React__default['default'].createElement("a", {
-      className: "rp-default-dropdown-arrow",
+      className: "rp-default-dropdown-svg",
       onClick: function onClick() {
         return onDelete();
       }
@@ -870,34 +880,7 @@
         }
       }, /*#__PURE__*/React__default['default'].createElement("a", null, item));
     }))));
-  }); // import React from "react";
-  // import DeleteButton from "./DeleteButton";
-  // export interface IDefaultInputSection {
-  //   value: string;
-  //   placeholder?: string;
-  //   onChange: (value: string) => void;
-  //   onDelete: () => void;
-  // }
-  // export default ({
-  //   value,
-  //   onChange,
-  //   onDelete,
-  //   placeholder = "INPUT TAG HERE!!!!!",
-  // }: IDefaultInputSection) => {
-  //   return (
-  //     <div className="rp-default-input-section">
-  //       <input
-  //         className="rp-default-input-section_input"
-  //         placeholder={placeholder}
-  //         value={value}
-  //         onChange={(e) => onChange(e.target.value)}
-  //       />
-  //       <a className="rp-default-input-section_delete" onClick={() => onDelete()}>
-  //         <DeleteButton />
-  //       </a>
-  //     </div>
-  //   );
-  // };
+  });
 
   var defaultState = {
     scale: 1,
@@ -1087,7 +1070,7 @@
           var refreshShapesWithAnnotationData = function refreshShapesWithAnnotationData() {
             _this.selectedId = null;
             _this.shapes = annotationData.map(function (eachAnnotationData) {
-              return new RectShape(eachAnnotationData, _this.onShapeChange, _this.annotationStyle);
+              return new RectShape(eachAnnotationData, _this.onShapeChange, _this.annotationStyle, _this.props.width, _this.props.height);
             });
 
             _this.onShapeChange();

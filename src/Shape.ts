@@ -67,6 +67,8 @@ export interface IShape {
   adjustMark: (adjustBase: IShapeAdjustBase) => void;
   setComment: (comment: string) => void;
   equal: (data: IAnnotation) => boolean;
+	imageWidth : number;
+	imageHeight : number;
 }
 
 export class RectShape implements IShape {
@@ -78,14 +80,21 @@ export class RectShape implements IShape {
 
   public readonly shapeStyle: IShapeStyle;
 
+	public imageHeight;
+	public imageWidth;
+
   constructor(
     data: IAnnotation<IShapeData>,
     onChange: () => void,
-    shapeStyle: IShapeStyle = defaultShapeStyle
+    shapeStyle: IShapeStyle = defaultShapeStyle,
+		imageWidth : number,
+		imageHeight : number
   ) {
     this.annotationData = data;
     this.onChangeCallBack = onChange;
     this.shapeStyle = shapeStyle;
+		this.imageWidth = imageWidth;
+		this.imageHeight = imageHeight;
   }
 
   public onDragStart = (positionX: number, positionY: number) => {
@@ -97,9 +106,25 @@ export class RectShape implements IShape {
   };
 
   public onDrag = (positionX: number, positionY: number) => {
-    this.annotationData.mark.x = positionX - this.dragStartOffset.offsetX;
-    this.annotationData.mark.y = positionY - this.dragStartOffset.offsetY;
-    this.onChangeCallBack();
+    // this.annotationData.mark.x = positionX - this.dragStartOffset.offsetX;
+    // this.annotationData.mark.y = positionY - this.dragStartOffset.offsetY;
+
+		const {
+      mark: { width, height },
+    } = this.annotationData;
+
+		let markX = positionX - this.dragStartOffset.offsetX;
+		let markY = positionY - this.dragStartOffset.offsetY;
+
+		// console.log(positionX + " " + positionY + " " + this.annotationData.mark.x + " " + this.annotationData.mark.y + " " + this.annotationData.mark.width + " " + this.annotationData.mark.height + " ");
+		
+		if(markX >= 0 && markX + width <= this.imageWidth && markY >= 0 && markY + height <= this.imageHeight){
+			this.annotationData.mark.x = positionX - this.dragStartOffset.offsetX;
+			this.annotationData.mark.y = positionY - this.dragStartOffset.offsetY;
+			this.onChangeCallBack();
+		}
+
+		
   };
 
   public checkBoundary = (positionX: number, positionY: number) => {

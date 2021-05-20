@@ -13,7 +13,7 @@ export var defaultShapeStyle = {
     transformerSize: 10,
 };
 var RectShape = /** @class */ (function () {
-    function RectShape(data, onChange, shapeStyle) {
+    function RectShape(data, onChange, shapeStyle, imageWidth, imageHeight) {
         var _this = this;
         if (shapeStyle === void 0) { shapeStyle = defaultShapeStyle; }
         this.onDragStart = function (positionX, positionY) {
@@ -24,9 +24,17 @@ var RectShape = /** @class */ (function () {
             };
         };
         this.onDrag = function (positionX, positionY) {
-            _this.annotationData.mark.x = positionX - _this.dragStartOffset.offsetX;
-            _this.annotationData.mark.y = positionY - _this.dragStartOffset.offsetY;
-            _this.onChangeCallBack();
+            // this.annotationData.mark.x = positionX - this.dragStartOffset.offsetX;
+            // this.annotationData.mark.y = positionY - this.dragStartOffset.offsetY;
+            var _a = _this.annotationData.mark, width = _a.width, height = _a.height;
+            var markX = positionX - _this.dragStartOffset.offsetX;
+            var markY = positionY - _this.dragStartOffset.offsetY;
+            // console.log(positionX + " " + positionY + " " + this.annotationData.mark.x + " " + this.annotationData.mark.y + " " + this.annotationData.mark.width + " " + this.annotationData.mark.height + " ");
+            if (markX >= 0 && markX + width <= _this.imageWidth && markY >= 0 && markY + height <= _this.imageHeight) {
+                _this.annotationData.mark.x = positionX - _this.dragStartOffset.offsetX;
+                _this.annotationData.mark.y = positionY - _this.dragStartOffset.offsetY;
+                _this.onChangeCallBack();
+            }
         };
         this.checkBoundary = function (positionX, positionY) {
             var _a = _this.annotationData.mark, x = _a.x, y = _a.y, width = _a.width, height = _a.height;
@@ -90,6 +98,8 @@ var RectShape = /** @class */ (function () {
         this.annotationData = data;
         this.onChangeCallBack = onChange;
         this.shapeStyle = shapeStyle;
+        this.imageWidth = imageWidth;
+        this.imageHeight = imageHeight;
     }
     return RectShape;
 }());

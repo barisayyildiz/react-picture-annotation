@@ -39,10 +39,11 @@ var DefaultAnnotationState = /** @class */ (function () {
                     height: 0,
                     type: "RECT",
                 },
-            }, onShapeChange, _this.context.annotationStyle));
+            }, onShapeChange, _this.context.annotationStyle, _this.context.props.width, _this.context.props.height));
             setState(new CreatingAnnotationState(_this.context));
         };
         this.context = context;
+        // console.log("width : " + this.context.props.width);
     }
     return DefaultAnnotationState;
 }());
