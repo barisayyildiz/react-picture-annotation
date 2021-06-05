@@ -110,6 +110,7 @@ export default class ReactPictureAnnotation extends React.Component<
   );
 
   public componentDidMount = () => {
+		const {annotationData} = this.props;
     const currentCanvas = this.canvasRef.current;
     const currentImageCanvas = this.imageCanvasRef.current;
     if (currentCanvas && currentImageCanvas) {
@@ -120,7 +121,20 @@ export default class ReactPictureAnnotation extends React.Component<
       this.onImageChange();
     }
 
-    this.syncAnnotationData();
+		if(annotationData){
+			this.selectedId = null;
+			this.shapes = annotationData.map(
+				(eachAnnotationData) =>
+					new RectShape(
+						eachAnnotationData,
+						this.onShapeChange,
+						this.annotationStyle,
+						this.props.width,
+						this.props.height
+					)
+			);
+		}
+    // this.syncAnnotationData();
     this.syncSelectedId();
   };
 
@@ -140,7 +154,7 @@ export default class ReactPictureAnnotation extends React.Component<
       }
     }
 
-    this.syncAnnotationData();
+    // this.syncAnnotationData();
     this.syncSelectedId();
   };
 

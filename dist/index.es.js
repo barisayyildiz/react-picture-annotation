@@ -917,6 +917,7 @@ var ReactPictureAnnotation = /*#__PURE__*/function (_React$Component) {
     _this.currentAnnotationState = new DefaultAnnotationState(_assertThisInitialized(_this));
 
     _this.componentDidMount = function () {
+      var annotationData = _this.props.annotationData;
       var currentCanvas = _this.canvasRef.current;
       var currentImageCanvas = _this.imageCanvasRef.current;
 
@@ -929,7 +930,13 @@ var ReactPictureAnnotation = /*#__PURE__*/function (_React$Component) {
         _this.onImageChange();
       }
 
-      _this.syncAnnotationData();
+      if (annotationData) {
+        _this.selectedId = null;
+        _this.shapes = annotationData.map(function (eachAnnotationData) {
+          return new RectShape(eachAnnotationData, _this.onShapeChange, _this.annotationStyle, _this.props.width, _this.props.height);
+        });
+      } // this.syncAnnotationData();
+
 
       _this.syncSelectedId();
     };
@@ -956,11 +963,12 @@ var ReactPictureAnnotation = /*#__PURE__*/function (_React$Component) {
         } else {
           _this.onImageChange();
         }
-      }
+      } // this.syncAnnotationData();
 
-      _this.syncAnnotationData();
 
       _this.syncSelectedId();
+
+      console.log("component did update, shapes : ", _this.shapes);
     };
 
     _this.calculateMousePosition = function (positionX, positionY) {
@@ -1057,6 +1065,8 @@ var ReactPictureAnnotation = /*#__PURE__*/function (_React$Component) {
 
     _this.syncAnnotationData = function () {
       var annotationData = _this.props.annotationData;
+      console.log("syncAnnotationData : ", annotationData);
+      console.log(Boolean(annotationData));
 
       if (annotationData) {
         var refreshShapesWithAnnotationData = function refreshShapesWithAnnotationData() {
@@ -1067,6 +1077,8 @@ var ReactPictureAnnotation = /*#__PURE__*/function (_React$Component) {
 
           _this.onShapeChange();
         };
+
+        console.log("this.shapes : ", _this.shapes);
 
         if (annotationData.length !== _this.shapes.length) {
           refreshShapesWithAnnotationData();
