@@ -79,7 +79,6 @@ var ReactPictureAnnotation = /** @class */ (function (_super) {
             }
             // this.syncAnnotationData();
             _this.syncSelectedId();
-            console.log("component did update, shapes : ", _this.shapes);
         };
         _this.calculateMousePosition = function (positionX, positionY) {
             var _a = _this.scaleState, originX = _a.originX, originY = _a.originY, scale = _a.scale;
@@ -140,8 +139,6 @@ var ReactPictureAnnotation = /** @class */ (function (_super) {
         };
         _this.syncAnnotationData = function () {
             var annotationData = _this.props.annotationData;
-            console.log("syncAnnotationData : ", annotationData);
-            console.log(Boolean(annotationData));
             if (annotationData) {
                 var refreshShapesWithAnnotationData = function () {
                     _this.selectedId = null;
@@ -150,7 +147,6 @@ var ReactPictureAnnotation = /** @class */ (function (_super) {
                     });
                     _this.onShapeChange();
                 };
-                console.log("this.shapes : ", _this.shapes);
                 if (annotationData.length !== _this.shapes.length) {
                     refreshShapesWithAnnotationData();
                 }
